@@ -268,4 +268,360 @@ The project dataset includes monitoring-station information associated with Trip
                                   ▼
                        ┌─────────────────────┐
                        │ Advisory / Insights │
-                       └─────────────────────┘
+                       └─────────────────────
+                       ```
+
+---
+
+# 📁 Project Structure
+                       
+🧰 Technology Stack
+| Layer              | Technology        |
+| ------------------ | ----------------- |
+| Frontend           | React 19          |
+| Language           | TypeScript        |
+| Build Tool         | Vite              |
+| Styling            | Tailwind CSS v4   |
+| Mapping            | Leaflet           |
+| Icons              | Lucide React      |
+| Animation          | Motion            |
+| Backend            | Node.js + Express |
+| TypeScript Runtime | TSX               |
+| Bundling           | esbuild           |
+| AI Integration     | Google Gen AI SDK |
+| Deployment         | Vercel            |
+
+📁 Project Structure
+
+ # 📁 Project Structure
+
+```text
+Aqua_Check/
+│
+├── api/
+│   └── advisory.ts                 # Vercel serverless function for AI-assisted advisory
+│
+├── public/                         # Static assets
+│
+├── src/
+│   ├── components/
+│   │   ├── HydroMap.tsx            # Interactive Leaflet hydrogeological map
+│   │   ├── LanguageModal.tsx       # Language selector
+│   │   ├── Navbar.tsx              # Navigation header
+│   │   ├── PreDrillingAdvisory.tsx # Pre-drilling recommendations
+│   │   ├── RegionalComparison.tsx  # District-level comparison
+│   │   ├── SearchFilter.tsx        # Search and filtering
+│   │   ├── StationDossier.tsx      # Station information panel
+│   │   └── VulnerabilitySpeedometer.tsx # Vulnerability indicator
+│   │
+│   ├── context/
+│   │   └── LanguageContext.tsx     # Language state management
+│   │
+│   ├── data/
+│   │   └── tripuraData.ts          # Tripura groundwater dataset
+│   │
+│   ├── i18n/
+│   │   └── translations.ts         # English, Bengali and Hindi translations
+│   │
+│   ├── utils/
+│   │   └── hydroLogic.ts           # Deterministic hydrogeological logic
+│   │
+│   ├── types.ts                    # TypeScript types and interfaces
+│   ├── App.tsx                     # Main application component
+│   ├── main.tsx                    # React entry point
+│   └── index.css                   # Global styles
+│
+├── .env.example                    # Environment variable template
+├── .gitignore                      # Git ignore rules
+├── index.html                      # HTML entry point
+├── metadata.json                   # Application metadata
+├── package.json                    # Dependencies and scripts
+├── server.ts                       # Express/Vite server
+├── tsconfig.json                   # TypeScript configuration
+├── vercel.json                     # Vercel deployment configuration
+└── vite.config.ts                  # Vite configuration
+
+---
+
+# 🚀 Getting Started
+
+## Prerequisites
+
+Make sure the following are installed:
+
+- Node.js 18+ or a compatible current version
+- npm
+
+---
+
+## 1. Clone the Repository
+
+```bash
+git clone https://github.com/koustavvd/Aqua_Check.git
+cd Aqua_Check
+```
+
+---
+
+## 2. Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+## 3. Configure Environment Variables
+
+Create a `.env` file in the project root.
+
+```env
+GEMINI_API_KEY="your-gemini-api-key"
+APP_URL="http://localhost:3000"
+```
+
+`GEMINI_API_KEY` is used for the AI-assisted advisory functionality.
+
+**Never commit your actual API key to GitHub.**
+
+---
+
+## 4. Start the Development Server
+
+```bash
+npm run dev
+```
+
+The application will be available at:
+
+```text
+http://localhost:3000
+```
+
+---
+
+# 📦 Available Scripts
+
+## Development
+
+```bash
+npm run dev
+```
+
+Starts the application in development mode.
+
+## Production Build
+
+```bash
+npm run build
+```
+
+Creates the production build of the application.
+
+## Production Start
+
+```bash
+npm start
+```
+
+Starts the application using the production configuration.
+
+## Preview
+
+```bash
+npm run preview
+```
+
+Previews the production frontend build locally.
+
+## Type Checking
+
+```bash
+npm run lint
+```
+
+Runs TypeScript checking without generating compiled output.
+
+---
+
+# ☁️ Deployment
+
+AquaCheck is configured for deployment on **Vercel**.
+
+The repository includes a `vercel.json` configuration for routing the application and API requests.
+
+## Deploy on Vercel
+
+1. Import the repository into your Vercel account.
+2. Select the **Vite** framework preset.
+3. Keep the project root as the repository root.
+4. Configure the required environment variables.
+5. Deploy the project.
+
+For AI-assisted advisories, configure:
+
+```text
+GEMINI_API_KEY
+```
+
+in the Vercel project environment.
+
+### Live Deployment
+
+**https://aqua-check-nu.vercel.app/**
+
+---
+
+# 🔐 Environment Variables
+
+| Variable | Purpose | Required |
+|---|---|---|
+| `GEMINI_API_KEY` | Authentication for Gemini AI advisory generation | For AI-assisted advisory |
+| `APP_URL` | Base URL used by the application environment | Environment-dependent |
+
+### Security
+
+Never commit:
+
+```text
+.env
+```
+
+or any file containing a real API key.
+
+Use environment variables for local development and cloud deployment.
+
+---
+
+# 📊 Data & Reference Sources
+
+The project documentation references the following groundwater and engineering sources:
+
+- **Central Ground Water Board (CGWB)**, Ministry of Jal Shakti, Government of India
+- **National Water Informatics Centre (NWIC)**
+- **Tripura Water and Sanitation Support Organisation (WSSO)**
+- **IS 2800** — Code of Practice for Tube Well Construction
+- **IS 12818** — UPVC Pipes for Well Casing
+
+These references provide contextual hydrogeological and engineering guidance for the project's decision-support workflow.
+
+---
+
+# ⚠️ Important Disclaimer
+
+AquaCheck is a **decision-support and informational platform**.
+
+Its outputs should not be interpreted as:
+
+- A guarantee of groundwater availability
+- A guarantee of borewell success
+- A guarantee of well yield
+- A replacement for professional hydrogeological investigation
+- A substitute for field verification
+- A substitute for applicable government permissions or regulations
+
+Actual groundwater conditions can vary significantly depending on local geology, seasonal conditions, aquifer characteristics, recharge, extraction, and other site-specific factors.
+
+Professional hydrogeological and engineering assessment should be performed before major drilling decisions.
+
+---
+
+# 🏆 Hackathon Project
+
+AquaCheck was developed as a **24-hour hackathon project** focused on groundwater assessment and pre-drilling decision support.
+
+The project combines:
+
+```text
+Geospatial Visualization
+        +
+Hydrogeological Indicators
+        +
+Deterministic Analysis
+        +
+AI-Assisted Advisory
+        +
+Multilingual UX
+```
+
+The objective was to demonstrate how groundwater information can be transformed into a more accessible and practical pre-drilling workflow.
+
+---
+
+# 👥 Team Project
+
+AquaCheck was developed collaboratively as a hackathon project.
+
+This repository is a personal repository of the team's project for portfolio, documentation, and further development purposes.
+
+Individual contributions should be represented accurately when describing the project in resumes, portfolios, presentations, and interviews.
+
+---
+
+# 🔮 Future Development
+
+Potential future improvements include:
+
+- Live groundwater telemetry integration
+- Historical groundwater trend analysis
+- More detailed spatial interpolation
+- Additional aquifer and geological datasets
+- Site-specific geophysical data integration
+- Improved uncertainty estimation
+- User-defined drilling scenarios
+- Field-data feedback integration
+- Expanded regional coverage
+- More advanced hydrogeological modelling
+
+---
+
+# 📌 Why AquaCheck?
+
+AquaCheck is built around a practical pre-drilling question:
+
+> **Before drilling, what do we know about the groundwater system and what risks should we consider?**
+
+Instead of presenting groundwater information as isolated datasets, the platform attempts to connect:
+
+```text
+Location
+   ↓
+Groundwater Information
+   ↓
+Hydrogeological Assessment
+   ↓
+Risk Interpretation
+   ↓
+Pre-Drilling Advisory
+```
+
+This makes AquaCheck an exploratory decision-support platform rather than simply a groundwater visualization tool.
+
+---
+
+# 📖 Repository Information
+
+**Repository**
+
+https://github.com/koustavvd/Aqua_Check
+
+**Live Application**
+
+https://aqua-check-nu.vercel.app/
+
+---
+
+# 📄 License
+
+This project is intended for educational, research, hackathon, and portfolio purposes.
+
+Third-party libraries and dependencies remain subject to their respective licenses.
+
+---
+
+## Built With
+
+**React · TypeScript · Vite · Tailwind CSS · Leaflet · Node.js · Express · Google Gemini · Vercel**
+
+
+

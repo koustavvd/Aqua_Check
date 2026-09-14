@@ -558,6 +558,16 @@ Individual contributions should be represented accurately when describing the pr
 
 ---
 
+# 👨‍💻 My Contribution
+
+During the 24-hour hackathon, my primary contributions to AquaCheck included:
+
+- **Data Collection & Preparation** — Researched relevant groundwater, hydrogeological, and monitoring-station information and helped collect, organize, and prepare the data used in the application.
+- **Research & Validation** — Researched the groundwater problem, relevant technical concepts, data sources, and existing approaches to help shape the solution.
+- **Data Integration & Testing** — Worked with the collected data in the application, tested outputs, and helped identify and refine issues during development.
+- **Product Structure & User Flow** — Contributed ideas for the overall structure, feature organization, dashboard layout, and how the platform should present groundwater information to users.
+- **Presentation & Pitch** — Contributed to the project presentation, PowerPoint preparation, solution explanation, and final hackathon pitch.
+
 # 🔮 Future Development
 
 Potential future improvements include:
